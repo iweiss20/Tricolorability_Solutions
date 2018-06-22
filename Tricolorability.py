@@ -1,3 +1,5 @@
+# from sympy import *
+
 def main():
     """
 
@@ -8,7 +10,7 @@ def main():
 
     array = build_array(strands)
 
-    nullity(array)
+    # nullity(array)
 
     return 0
 
@@ -43,6 +45,7 @@ def build_array(strands):
 
     print(array)
 
+
     return array
 
 
@@ -52,7 +55,11 @@ def nullity(array):
     :param array: A square array which represents the knot crossings
     :return: the dimensions of the null space for the given array
     """
+    M = Matrix([0] * array.__len__())
+    for i in range(array.__len__()):
+        M[i] = array[i]
 
+    print(M)
     return 0
 
 
