@@ -4,33 +4,44 @@ def main():
     :return: 0
     """
 
-    arcs = int(input("How many arcs do you have? "))
+    strands = int(input("How many strands do you have? "))
 
-    array = build_array(arcs)
+    array = build_array(strands)
 
     return 0
 
 
-def build_array(arcs):
+def build_array(strands):
     """
 
-    :param arcs:
+    :param strands:
     :return:
     """
 
     # gauss_code = list(input("Please input  extended gauss code: "))
-    gauss_code = [int(x) for x in input("Please input  extended gauss code: ")
+    gauss_code = [int(x) for x in input("Please input strand code: ")
         .split()]
     print(gauss_code)
-    array = []
-    array.append([])
+    array = [strands]
+    array.append([strands])
 
-    if gauss_code[0] < 0:
-        gauss_code.append(gauss_code[0])
+    for i in range(0, strands):
+        if i == 0:
+            j = abs(gauss_code[i+1])
+            k = abs(gauss_code[i+2])
+            array[i][i] = 1
+            array[i][j - 1] = 1
+            array[i][k - 1] = 1
+        else:
+            j = abs(gauss_code[3 * i + 1])
+            k = abs(gauss_code[3 * i + 2])
+            array[i][i] = 1
+            array[i][j - 1] = 1
+            array[i][k - 1] = 1
 
-    # for i in range(arcs):
 
     return array
+
 
 if __name__== '__main__':
     main()
