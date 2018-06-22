@@ -1,17 +1,25 @@
 close all;
 clear all;
 
-strands = int(input("How many strands do you have? "));
-
+strands = input('How many strands do you have? ');
+% int_strands = str2num(strands);
 %Users need to input as a list
-gauss_code = int(input("Please input strand code: "));
+gauss_code = input('Please input strand code: ');
+% int_gauss_code = str2num(gauss_code);
+array = ones(strands, strands);
 
-array = [strand][strand];
+% print(gauss_code{1, 1});
 
-for i=1:strands
-    array[i][gauss_code[3 * i]] = 1;
-    array[i][gauss_code[3 * i + 1]] = 1;
-    array[i][gauss_code[3 * i + 2]] = 1;
-end;
+% print(strands);
 
-rref_array = rref(array);
+%  for i=1:strands
+%      array{i, int_gauss_code{3 * i}} = 1;
+%      array{i, int_gauss_code{3 * i + 1}} = 1;
+%      array{i, int_gauss_code{3 * i + 2}} = 1;
+%  end
+ 
+ array(strands, 1:strands) = 0;
+
+ Nullity = length(null(array));
+
+%  print(Nullity);
