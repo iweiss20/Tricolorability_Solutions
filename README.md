@@ -21,10 +21,14 @@ Example: [1 5 4 4 3 2 2 4 5 5 3 1 3 1 2] - Whitehead Link
 # Example Inputs and Output
 ## Trefoil Knot
 Prompt 1: 3
-Prompt 2: [1 2 3 3 1 2 2 3 1] 
+
+Prompt 2: [1 2 3 3 1 2 2 3 1]
+
 Output: 9
 
 ## Square Knot
 Prompt 1: 6
+
 Prompt 2: [1 2 6 6 2 1 5 6 1 3 4 2 4 5 3 5 4 3]
+
 Output: 27
