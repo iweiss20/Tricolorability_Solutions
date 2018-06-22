@@ -8,6 +8,8 @@ def main():
 
     array = build_array(strands)
 
+    nullity(array)
+
     return 0
 
 
@@ -44,14 +46,14 @@ def build_array(strands):
     return array
 
 
-def nullspace(array):
+def nullity(array):
+    """
+    Given a square array, this function will calculate the nullity of the array
+    :param array: A square array which represents the knot crossings
+    :return: the dimensions of the null space for the given array
     """
 
-    :param array:
-    :return:
-    """
-
-    return array
+    return 0
 
 
 if __name__== '__main__':
