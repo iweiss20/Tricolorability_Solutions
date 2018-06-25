@@ -23,6 +23,8 @@ Example: [1 5 4 4 3 2 2 4 5 5 3 1 3 1 2] - Whitehead Link
 
 ![Stevedore Knot](https://github.com/iweiss20/Tricolorability_Solutions/blob/master/Stevedore%20Knot.png)
 
+Strand code is very similar to gauss code. First, you must arbitrarily label all of the strands from 1 - n, where n is the number of strands. Then, pick a strand. In this example of the Stevedore knot, we will start with strand one. Looking at where strand 1 is part of an over crossing, we note that it interacts with strands 2 and 3. Thus, we have [1 2 3] as part of our strand code. Then, we move onto strand 2 and see it acts as an over crossing for strands 6 and 1, thus [2 6 1] is part of the strand code as well, all together, the strand code for the Stevedore knot is [1 2 3 2 6 1 3 4 1 4 5 3 5 2 6 6 4 5].
+
 # Example Inputs and Output
 ## Trefoil Knot
 Prompt 1: 3
