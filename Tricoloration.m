@@ -1,34 +1,38 @@
+% Set MatLab's defaults to empty
 close all;
 clear all;
 
-strands = 4; %= input('How many strands do you have? ');
-% int_strands = str2num(strands);
-%Users need to input as a list
-% gauss_code = input('Please input strand code: ');
-% gauss_code = [1 2 6 6 2 1 5 6 1 3 4 2 4 5 3 5 4 3];
-gauss_code = [1 3 2 3 1 4 4 1 2 2 3 4];
-% int_gauss_code = str2num(gauss_code);
+% Asks the user for the number of strands in a link or knot
+strands = input('How many strands do you have? ');
+
+% Users need to input as a list
+strand_code = input('Please input strand code: ');
+
+% Builds an empty array of size Strand x Strand
 array = zeros(strands, strands);
 
-% print(gauss_code(1, 1));
-
-% print(strands);
-
+% Examines the inputted strand code and fills the array with
+% the appropriate 1's in order to satisfy the necessary equations
  for i=1:strands-1
      if i == 1
-         array(i, gauss_code(1, 1)) = 1;
-         array(i, gauss_code(1, 2)) = 1;
-         array(i, gauss_code(1, 3)) = 1;
+         array(i, strand_code(1, 1)) = 1;
+         array(i, strand_code(1, 2)) = 1;
+         array(i, strand_code(1, 3)) = 1;
      else
-         array(i, gauss_code(1, 3 * i + 1)) = 1;
-         array(i, gauss_code(1, 3 * i + 2)) = 1;
-         array(i, gauss_code(1, 3 * i + 3)) = 1;
+         array(i, strand_code(1, 3 * i + 1)) = 1;
+         array(i, strand_code(1, 3 * i + 2)) = 1;
+         array(i, strand_code(1, 3 * i + 3)) = 1;
      end
  end
  
-%  array(strands, 1:strands) = 0;
+% Sets the last row of the array to zero
+array(strands, 1:strands) = 0;
+
+% Takes the Reduced Row Echelon Form of the array
 array = rref(array);
- counter = 0;
+Nullity = 0;
+
+% Finds the nullity of the matrix by counting the number of empty rows
  for i=1:strands
      check = true;
      for j = 1:strands
@@ -41,11 +45,12 @@ array = rref(array);
      end
      
      if check == true
-         counter = counter + 1;
+         Nullity = Nullity + 1;
      end
  end
  
- Nullity = 3 ^ counter;
+% The solution to 3-colorability is 3 ^ nullity
+Solution = 3 ^ Nullity;
  
-
- disp(Nullity);
+% Prints out the solution
+disp(Solution);
