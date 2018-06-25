@@ -13,16 +13,10 @@ array = zeros(strands, strands);
 
 % Examines the inputted strand code and fills the array with
 % the appropriate 1's in order to satisfy the necessary equations
- for i=1:strands-1
-     if i == 1
-         array(i, strand_code(1, 1)) = 1;
-         array(i, strand_code(1, 2)) = 1;
-         array(i, strand_code(1, 3)) = 1;
-     else
-         array(i, strand_code(1, 3 * i + 1)) = 1;
-         array(i, strand_code(1, 3 * i + 2)) = 1;
-         array(i, strand_code(1, 3 * i + 3)) = 1;
-     end
+ for i=1:strands
+    array(i, strand_code(1, 3 * (i - 1) + 1)) = 1;
+    array(i, strand_code(1, 3 * (i - 1) + 2)) = 1;
+    array(i, strand_code(1, 3 * (i - 1) + 3)) = 1;
  end
  
 % Sets the last row of the array to zero
