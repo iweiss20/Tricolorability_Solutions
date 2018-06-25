@@ -14,7 +14,7 @@ Prompt 2: "Please input the strand code:" For more information about strand code
 
 Example: [1 2 3 3 1 2 2 3 1] - Trefoil Knot
 
-Example: [1 2 6 6 1 2 5 6 1 3 4 2 4 5 3 5 4 3] - Square Knot
+Example: [1 2 3 2 6 1 3 4 1 4 5 3 5 2 6 6 4 5] - Stevedore Knot
 
 Example: [1 5 4 4 3 2 2 4 5 5 3 1 3 1 2] - Whitehead Link
 
@@ -33,9 +33,40 @@ Prompt 2: [1 2 3 3 1 2 2 3 1]
 
 Output: 9
 
-## Square Knot
+## Stevedore Knot
 Prompt 1: 6
 
-Prompt 2: [1 2 6 6 2 1 5 6 1 3 4 2 4 5 3 5 4 3]
+Prompt 2: [1 2 3 2 6 1 3 4 1 4 5 3 5 2 6 6 4 5]
 
-Output: 27
+Output: 9
+
+
+## Whitehead Link
+Prompt 1: 5
+
+Prompt 2:[1 5 4 4 3 2 2 4 5 5 3 1 3 1 2]
+
+Output: 3
+
+
+
+# Note
+
+The authors believe, but have not confirmed that this program only works for prime links and knots.
+
+# Bibliography  
+## Author
+
+Justin Roberts
+
+## Title
+
+Knot Knotes
+
+## University
+
+Edinburgh University
+
+## Date
+
+March 1999
