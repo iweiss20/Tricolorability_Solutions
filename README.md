@@ -21,7 +21,7 @@ Example: [1 5 4 4 3 2 2 4 5 5 3 1 3 1 2] - Whitehead Link
 
 # Strand Code
 
-![3-Hopf](https://github.com/iweiss20/Tricolorability_Solutions/blob/master/hopf3.png)
+![Stevedore Knot](https://github.com/iweiss20/Tricolorability_Solutions/blob/master/Stevedore%20Knot.png)
 
 # Example Inputs and Output
 ## Trefoil Knot
