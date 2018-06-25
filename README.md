@@ -13,7 +13,9 @@ Prompt 1: "How many strands do you have?" The answer to this question depends on
 Prompt 2: "Please input the strand code:" For more information about strand code, please see the section on strand code. The answer to this question depends on the link or knot, but its output should be relatively the same.
 
 Example: [1 2 3 3 1 2 2 3 1] - Trefoil Knot
+
 Example: [1 2 6 6 1 2 5 6 1 3 4 2 4 5 3 5 4 3] - Square Knot
+
 Example: [1 5 4 4 3 2 2 4 5 5 3 1 3 1 2] - Whitehead Link
 
 
