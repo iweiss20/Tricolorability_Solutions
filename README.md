@@ -1,6 +1,8 @@
 # Tricolorability Solutions
 A program that checks the number of ways to tricolor a knot or link with more than two crossings.
 
+Currently exists with a Matlab and a Python solution.
+
 Please note: The output will always at least give 3 as an answer. This is because this method of checking for colorings allows for a knot or link to be considered to be tri-colorable by the trivial coloring of one color. So, in order to have the correct solution to your question, you must always subtract 3 from the output.
 
 # How To Use
